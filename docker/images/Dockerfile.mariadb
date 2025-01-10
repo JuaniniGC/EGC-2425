@@ -1,5 +1,6 @@
-FROM mariadb:latest
+FROM mariadb:11.2
 
 RUN apt-get update && \
-    apt-get install -y mariadb-client && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y mariadb-client net-tools iputils-ping && \
+    rm -rf /var/lib/apt/lists/* 
+
