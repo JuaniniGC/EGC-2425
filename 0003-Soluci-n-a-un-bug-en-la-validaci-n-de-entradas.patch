@@ -1,0 +1,33 @@
+From dc8c724f4dcd308878758294b35ca0df803dd748 Mon Sep 17 00:00:00 2001
+From: Belen Ramos <brgutierrez@us.es>
+Date: Wed, 8 Jan 2025 09:33:18 +0100
+Subject: [PATCH 3/5] =?UTF-8?q?Soluci=C3=B3n=20a=20un=20bug=20en=20la=20va?=
+ =?UTF-8?q?lidaci=C3=B3n=20de=20entradas?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ archivo4.txt | 1 +
+ archivo5.txt | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 archivo4.txt
+ create mode 100644 archivo5.txt
+
+diff --git a/archivo4.txt b/archivo4.txt
+new file mode 100644
+index 0000000..3320c4a
+--- /dev/null
++++ b/archivo4.txt
+@@ -0,0 +1 @@
++cambio 4
+diff --git a/archivo5.txt b/archivo5.txt
+new file mode 100644
+index 0000000..d8eeddc
+--- /dev/null
++++ b/archivo5.txt
+@@ -0,0 +1 @@
++cambio 5
+-- 
+2.47.1
+
