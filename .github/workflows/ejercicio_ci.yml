@@ -4,10 +4,11 @@ on:
   push:
     branches: [config/ci]
 
+
 jobs:
   pytest:
     runs-on: ubuntu-latest
-
+  
     services:
       mysql:
         image: mysql:5.7
@@ -48,12 +49,14 @@ jobs:
         pytest app/modules/ --ignore-glob='*selenium*'
 
 
-      check_updates:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout repository
-              uses: actions/checkout@v2
-          - name: Install npm
-              run: npm install
-          - name: Check outdated
-              run: npm outdated reveal.js
+  outdated-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+
+      - run: npm ci
+
+      - name: run outdate check
+        uses: odanado/outdated-check-action@v0
+        id: outdate-check
